@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using Dottor.MyBookLibrary.Data;
 using Dottor.MyBookLibrary.Data.Controllers;
 using Dottor.MyBookLibrary.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Dottor.MyBookLibrary.Web
 {
+    [Authorize]
     public class AggiungiInSql : PageModel
     {
         private readonly IBooksRepository _booksRepository;
@@ -26,9 +28,9 @@ namespace Dottor.MyBookLibrary.Web
         {
             var details = await _book.GetDetails(isbn);
             var sbook = new Book();
-            //sbook.Author = details.details.authors?.FirstOrDefault()?.name;
+            sbook.Author = details.details.authors?.FirstOrDefault()?.name;
             sbook.Title = details.details.title;
-            //sbook.IsRead = false;
+            sbook.IsRead = false;
             _booksRepository.Insert(sbook);
 
             return RedirectToPage("/Index");
