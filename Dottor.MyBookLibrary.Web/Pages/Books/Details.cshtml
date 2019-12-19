@@ -1,0 +1,20 @@
+﻿@page "{id}"
+@model Dottor.MyBookLibrary.Web.Pages.Books.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Model.Book.Title</h1>
+
+<div>@Model.Book.Description</div>
+
+@foreach (var item in Model.Bookhistory)
+{
+    <h6>@item.ReadStart</h6>
+    <h6>@item.ReadEnd</h6>
+    <h6>@item.Notes</h6>
+
+}
+
+
+

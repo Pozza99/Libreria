@@ -1,0 +1,27 @@
+﻿@page
+@model Dottor.MyBookLibrary.Web.SearchModel
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>search for title of Book</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Titolo del Libro</label> <!--il nome del display che abbiamo messo di la -->
+        <input class="form-control" asp-for="Input.Title" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cerca</button>
+</form>
+
+@foreach (var l in Model.Books)
+{
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">@l.title</h5>
+            <p class="card-text">@l.author_name?.FirstOrDefault()<br /> ISBN:@l.isbn?.FirstOrDefault() </p>
+            <a asp-page="AggiungiInSql" asp-route-isbn="@l.isbn?.FirstOrDefault()" class="btn btn-primary">Aggiungi</a>
+        </div>
+    </div>
+}

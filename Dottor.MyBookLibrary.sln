@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.161
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dottor.MyBookLibrary.Web", "Dottor.MyBookLibrary.Web\Dottor.MyBookLibrary.Web.csproj", "{68EDBEA0-A134-423B-AC22-9F9B5CC31BFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dottor.MyBookLibrary.Data", "Dottor.MyBookLibrary.Data\Dottor.MyBookLibrary.Data.csproj", "{ED68E5A7-D14B-449A-81F8-D1507BD5534F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{5FB780EE-7867-442B-B18D-9E92C817E75A}"
+	ProjectSection(SolutionItems) = preProject
+		Db_creation.sql = Db_creation.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68EDBEA0-A134-423B-AC22-9F9B5CC31BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68EDBEA0-A134-423B-AC22-9F9B5CC31BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68EDBEA0-A134-423B-AC22-9F9B5CC31BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68EDBEA0-A134-423B-AC22-9F9B5CC31BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED68E5A7-D14B-449A-81F8-D1507BD5534F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED68E5A7-D14B-449A-81F8-D1507BD5534F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED68E5A7-D14B-449A-81F8-D1507BD5534F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED68E5A7-D14B-449A-81F8-D1507BD5534F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08EEE4FC-4288-4D4E-8881-F5CA808A80E9}
+	EndGlobalSection
+EndGlobal
