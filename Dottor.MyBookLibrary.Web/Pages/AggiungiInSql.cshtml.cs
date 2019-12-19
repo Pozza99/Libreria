@@ -26,9 +26,9 @@ namespace Dottor.MyBookLibrary.Web
         {
             var details = await _book.GetDetails(isbn);
             var sbook = new Book();
-            sbook.Author = details.details.authors?.FirstOrDefault()?.name;
+            //sbook.Author = details.details.authors?.FirstOrDefault()?.name;
             sbook.Title = details.details.title;
-            sbook.IsRead = false;
+            //sbook.IsRead = false;
             _booksRepository.Insert(sbook);
 
             return RedirectToPage("/Index");
