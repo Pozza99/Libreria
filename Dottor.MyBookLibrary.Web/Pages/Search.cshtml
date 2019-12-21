@@ -12,12 +12,12 @@
         <input class="form-control" asp-for="Input.Title" />
     </div>
 
-    <button type="submit" class="btn btn-primary">Cerca</button>
+    <button type="submit" class="btn btn-primary" style="margin-bottom:17px;">Cerca</button>
 </form>
 
 @foreach (var l in Model.Books)
 {
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem; float: left ; margin-right: 15px; margin-bottom:15px; max-height: 225px; ">
         <div class="card-body">
             <h5 class="card-title">@l.title</h5>
             <p class="card-text">@l.author_name?.FirstOrDefault()<br /> ISBN:@l.isbn?.FirstOrDefault() </p>

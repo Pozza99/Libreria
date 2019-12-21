@@ -10,7 +10,7 @@ using static Dottor.MyBookLibrary.Data.Models.SBook;
 
 namespace Dottor.MyBookLibrary.Web
 {
-    
+    [Authorize]
     public class SearchModel : PageModel
     {
         private readonly ISBook _Sbook;
